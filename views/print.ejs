@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rifa Solidaria por Mac · Letra <%= letter %></title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#19364e;background:#e9eef2}
+.toolbar{padding:12px 20px;background:#19364e;color:white;display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
+button{padding:10px 20px;border:0;border-radius:6px;background:#fff;color:#19364e;font-size:16px;font-weight:bold;cursor:pointer}
+.page{width:8.5in;min-height:11in;margin:18px auto;padding:.46in .47in;background:white;box-shadow:0 2px 12px #0002;page-break-after:always;break-after:page}
+.head{height:.91in;position:relative}
+h1{font-size:19px;letter-spacing:.3px;margin:0 0 8px}
+.info{font-size:12px;margin:0;line-height:1.5}
+.page-no{position:absolute;right:0;top:26px;font-size:12px;font-weight:bold}
+.ticket{height:.433in;border:1px solid #536e83;border-radius:5px;margin-bottom:.025in;display:flex;align-items:center;gap:10px;padding:0 9px;white-space:nowrap}
+.number{font-size:18px;font-weight:bold;min-width:66px;text-align:center;border-right:1px solid #d3dbe0;padding-right:9px}
+.field{font-size:12px;font-weight:bold;flex:1}
+.field.phone{flex:.8}
+@page{size:letter;margin:0}
+@media print{body{background:white}.toolbar{display:none}.page{margin:0;box-shadow:none;width:8.5in;height:11in;min-height:0;overflow:hidden}.page:last-child{page-break-after:auto;break-after:auto}}
+@media screen and (max-width:850px){.page{margin:12px auto}}
+</style>
+</head>
+<body>
+<div class="toolbar"><span>Letra <%= letter %> · 5 hojas · tamaño carta · imprimir al 100%</span><button type="button" onclick="window.print()">Imprimir</button></div>
+<% for(let page=0;page<5;page++){ %>
+<section class="page">
+ <div class="head"><h1>RIFA SOLIDARIA POR MAC</h1><p class="info">Letra <strong><%= letter %></strong> · Responsable: <strong><%= responsible %></strong> · $1.000 por número</p><div class="page-no">Hoja <%= page+1 %> de 5</div></div>
+ <% for(let i=1;i<=20;i++){ const n=page*20+i; %>
+ <div class="ticket"><span class="number"><%= letter %>-<%= String(n).padStart(2,'0') %></span><span class="field">Nombre:</span><span class="field phone">Tel:</span></div>
+ <% } %>
+</section>
+<% } %>
+</body>
+</html>

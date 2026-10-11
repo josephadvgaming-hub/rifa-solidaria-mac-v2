@@ -1,0 +1,23 @@
+RIFA SOLIDARIA POR MAC - V1.1
+
+ATENCION: Este ZIP NO contiene .env ni contraseñas.
+NO SUBAS A RAILWAY ANTES DE RESPALDAR POSTGRESQL Y PROBAR LOCALMENTE.
+
+1. Haz una copia de tu carpeta actual y conserva el .env SOLO en tu PC.
+2. Extrae este ZIP en otra carpeta, por ejemplo rifa-solidaria-v1.1.
+3. Copia TU .env local a la nueva carpeta, sin subirlo a GitHub.
+4. Abre una terminal en la nueva carpeta y ejecuta npm install.
+5. Para probar sin tocar Railway, usa una base PostgreSQL local de prueba.
+6. Ejecuta npm start y abre http://localhost:3000/login (o tu PORT local).
+7. Revisa portada, premios, bloqueo físico, impresión, búsqueda y WhatsApp.
+8. Antes de actualizar GitHub, crea respaldo RESTAURABLE de Railway PostgreSQL.
+9. El esquema crea tablas adicionales sin borrar usuarios ni ventas.
+
+NOTAS:
+- El botón WhatsApp abre un mensaje; el vendedor debe enviarlo manualmente.
+- El bloqueo de letra es total: no permite bloquear letras con ventas/reservas previas.
+- Las ventas físicas se ingresan una a una por el administrador.
+- No desbloquees una letra hasta recuperar y conciliar su lista de papel.
+- La exportación CSV es un listado de participaciones, NO un respaldo integral restaurable.
+- Fotos de los 16 premios incluidas a partir de las fotografías proporcionadas por el organizador.
+- Sorteo y respaldos automáticos NO están incluidos.

@@ -1,0 +1,20 @@
+RIFA SOLIDARIA POR MAC - PAQUETE COMPLETO v1.2
+
+CONTENIDO: server.js, schema.sql, package.json, views/ (9 plantillas), public/ (CSS, foto Mac y 16 premios).
+
+IMPORTANTE:
+- Este paquete NO incluye .env ni contraseñas.
+- Mantén en Railway las variables DATABASE_URL, SESSION_SECRET, ADMIN_USER, ADMIN_PASSWORD, NODE_ENV=production.
+- No borres PostgreSQL: schema.sql usa CREATE TABLE IF NOT EXISTS e INSERT ON CONFLICT DO NOTHING.
+- ADMIN_PASSWORD solo crea el administrador si no existe: cambiar la variable no cambia la clave de una cuenta existente.
+- La portada /login es pública, los premios están en /premios, el panel / requiere sesión.
+- La plantilla dashboard.ejs usa physical y server.js sí envía physical:physical.rows.
+
+PUBLICACIÓN RECOMENDADA:
+1) Respaldar el repositorio actual o crear un repositorio nuevo privado para evitar mezcla de archivos.
+2) Subir TODO el contenido de esta carpeta, manteniendo las subcarpetas views y public/premios.
+3) Comprobar en GitHub que están los 9 archivos .ejs, public/style.css, public/mac.jpg y las 16 fotos de premios.
+4) Conectar el repositorio a Railway; mantener las variables existentes y la conexión PostgreSQL.
+5) Esperar despliegue y verificar /login, /premios, login y panel.
+
+Este paquete se comprobó de forma estática (sintaxis de server.js y estructura de archivos), NO se probó contra Railway ni contra PostgreSQL real.

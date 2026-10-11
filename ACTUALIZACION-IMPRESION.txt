@@ -1,0 +1,7 @@
+Actualización del diseño de impresión de letras físicas.
+- 5 hojas tamaño carta por letra (20 números por hoja).
+- Número preimpreso, Nombre: y Tel: con espacio en blanco, sin rayas.
+- No modifica rutas, lógica de ventas, tablas ni datos de PostgreSQL.
+- Para imprimir: administrador > letras físicas > imprimir; seleccionar papel Carta, escala 100%, desactivar encabezados/pies del navegador.
+- Antes de publicar: probar localmente y crear un respaldo restaurable de Railway PostgreSQL.
+- No incluir el archivo .env en GitHub.
